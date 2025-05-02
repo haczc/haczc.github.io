@@ -9,7 +9,157 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 0;<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>淮安区文旅名片</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: '微软雅黑', sans-serif; background-color: #f5f5f5; }
+        
+        /* 导航样式 */
+        nav {
+            background: #005792;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #FFD700; }
+
+        /* 内容区块 */
+        .section {
+            padding: 3rem 10%;
+            border-bottom: 3px solid #eee;
+        }
+        h2 {
+            color: #004B87;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* 图片画廊 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* 分栏布局 */
+        .columns {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .column {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#hero">伟人故里</a>
+        <a href="#food">美食之乡</a>
+        <a href="#culture">名著源地</a>
+        <a href="#tourism">旅游胜地</a>
+    </nav>
+
+    <!-- 伟人故里 -->
+    <section class="section" id="hero">
+        <h2>周恩来故里</h2>
+        <div class="columns">
+            <div class="column">
+                <h3>周恩来纪念馆</h3>
+                <p>国家一级博物馆，40万平方米纪念园区，展示总理生平事迹</p>
+                <img src="https://example.com/zhouenlai.jpg" alt="纪念馆">
+            </div>
+            <div class="column">
+                <h3>故居建筑群</h3>
+                <p>保存完好的明清建筑群，包含12间生活居室和百年榆树</p>
+                <img src="https://example.com/guju.jpg" alt="故居">
+            </div>
+        </div>
+    </section>
+
+    <!-- 美食之乡 -->
+    <section class="section" id="food">
+        <h2>淮扬菜发源地</h2>
+        <div class="gallery">
+            <img src="https://example.com/changyumian.jpg" alt="长鱼面">
+            <img src="https://example.com/pingqiao.jpg" alt="平桥豆腐">
+            <img src="https://example.com/tea.jpg" alt="茶馓">
+        </div>
+        <div class="columns">
+            <div class="column">
+                <h3>四大名宴</h3>
+                <p>全鳝宴、全羊席、文楼汤包、软兜长鱼等非遗美食</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 名著源地 -->
+    <section class="section" id="culture">
+        <h2>文学巨匠之乡</h2>
+        <div class="columns">
+            <div class="column">
+                <h3>吴承恩故居</h3>
+                <img src="https://example.com/wucheng.jpg" alt="吴承恩故居">
+                <p>明代园林建筑群，展示《西游记》创作手稿和文物</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅游胜地 -->
+    <section class="section" id="tourism">
+        <h2>全域旅游示范区</h2>
+        <div class="gallery">
+            <img src="https://example.com/huaianfu.jpg" alt="淮安府署">
+            <img src="https://example.com/hexiagu.jpg" alt="河下古镇">
+            <img src="https://example.com/yunhe.jpg" alt="运河长廊">
+        </div>
+        <div class="columns">
+            <div class="column">
+                <h3>必游景点</h3>
+                <ul>
+                    <li>中国漕运博物馆：展示千年漕运文化</li>
+                    <li>河下古镇：2500年历史的水运商埠</li>
+                    <li>淮安府署：全国最大明清府衙</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#004B87; color:white; text-align:center; padding:1rem;">
+        <p>© 2025 淮安区文化旅游局 | 数据来源：淮安市文旅发展报告</p>
+    </footer>
+</body>
+</html>
     }
 
     header {
