@@ -2,150 +2,168 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>淮安区文旅名片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="淮安区文化旅游门户网站，周恩来故里，淮扬菜发源地，大运河文化带核心区">
+    <meta name="keywords" content="周恩来纪念馆,河下古镇,淮安府署,平桥豆腐,软兜长鱼">
+    <title>大美淮安区欢迎您！</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: '微软雅黑', sans-serif; background-color: #f5f5f5; }
-        
-        /* 导航样式 */
-        nav {
-            background: #005792;
-            padding: 1rem;
+        body { 
+            font-family: "微软雅黑", sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+
+        /* 头部导航 */
+        .nav {
+            background: #2c3e50;
+            padding: 15px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
-        nav a {
+        .nav a {
             color: white;
             text-decoration: none;
-            margin: 0 2rem;
-            font-size: 1.2rem;
-            transition: color 0.3s;
+            margin: 0 20px;
+            transition: opacity 0.3s;
         }
-        nav a:hover { color: #FFD700; }
+        .nav a:hover { opacity: 0.8; }
+
+        /* 主标题区 */
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://s3.bmp.ovh/imgs/2025/04/27/bfa8886602d16a2b.jpg') center/cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: left;
+        }
+        .header h1 {
+            font-size: 4em;
+            margin: 0 0 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .header p {
+            font-size: 1.5em;
+            margin: 0;
+            letter-spacing: 1px;
+        }
 
         /* 内容区块 */
         .section {
-            padding: 3rem 10%;
-            border-bottom: 3px solid #eee;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        h2 {
-            color: #004B87;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        /* 图片画廊 */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            overflow: hidden;
             transition: transform 0.3s;
         }
-        .gallery img:hover {
-            transform: scale(1.03);
+        .card:hover { transform: translateY(-5px); }
+        .card img { 
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid #eee;
+        }
+        .card-content { 
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
         }
 
-        /* 分栏布局 */
-        .columns {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
+        /* 网格布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-        .column {
-            flex: 1;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        /* 页脚 */
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        footer p { margin: 10px 0; }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.5em; }
+            .nav a { margin: 0 10px; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#hero">伟人故里</a>
-        <a href="#food">美食之乡</a>
-        <a href="#culture">名著源地</a>
-        <a href="#tourism">旅游胜地</a>
+    <nav class="nav">
+        <a href="#history">千年文脉</a>
+        <a href="#scenic">诗画淮安</a>
+        <a href="#food">淮扬美味</a>
     </nav>
 
-    <!-- 伟人故里 -->
-    <section class="section" id="hero">
-        <h2>周恩来故里</h2>
-        <div class="columns">
-            <div class="column">
-                <h3>周恩来纪念馆</h3>
-                <p>国家一级博物馆，40万平方米纪念园区，展示总理生平事迹</p>
-                <img src="https://example.com/zhouenlai.jpg" alt="纪念馆">
-            </div>
-            <div class="column">
-                <h3>故居建筑群</h3>
-                <p>保存完好的明清建筑群，包含12间生活居室和百年榆树</p>
-                <img src="https://example.com/guju.jpg" alt="故居">
-            </div>
-        </div>
-    </section>
+    <header class="header">
+        <h1>大美淮安区欢迎您！</h1>
+        <p>运河之都·总理故里·江淮明珠</p>
+    </header>
 
-    <!-- 美食之乡 -->
-    <section class="section" id="food">
-        <h2>淮扬菜发源地</h2>
-        <div class="gallery">
-            <img src="https://example.com/changyumian.jpg" alt="长鱼面">
-            <img src="https://example.com/pingqiao.jpg" alt="平桥豆腐">
-            <img src="https://example.com/tea.jpg" alt="茶馓">
-        </div>
-        <div class="columns">
-            <div class="column">
-                <h3>四大名宴</h3>
-                <p>全鳝宴、全羊席、文楼汤包、软兜长鱼等非遗美食</p>
+    <main>
+        <!-- 历史文脉 -->
+        <section class="section" id="history">
+            <div class="card">
+                <img src="https://example.com/zhouenlai.jpg" alt="周恩来纪念馆">
+                <div class="card-content">
+                    <h2>伟人故里</h2>
+                    <p>周恩来纪念馆占地40万平方米，完整保存总理青少年时期生活场景...</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 名著源地 -->
-    <section class="section" id="culture">
-        <h2>文学巨匠之乡</h2>
-        <div class="columns">
-            <div class="column">
-                <h3>吴承恩故居</h3>
-                <img src="https://example.com/wucheng.jpg" alt="吴承恩故居">
-                <p>明代园林建筑群，展示《西游记》创作手稿和文物</p>
+        <!-- 景点展示 -->
+        <section class="section" id="scenic">
+            <div class="grid">
+                <div class="card">
+                    <img src="https://example.com/hexiagu.jpg" alt="河下古镇">
+                    <div class="card-content">
+                        <h3>千年河下古镇</h3>
+                        <p>保存完好的明清石板街巷，见证漕运文化的历史变迁...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://example.com/yunhe.jpg" alt="运河风光">
+                    <div class="card-content">
+                        <h3>大运河文化带</h3>
+                        <p>世界文化遗产段，夜游灯光秀展现运河古韵今风...</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 旅游胜地 -->
-    <section class="section" id="tourism">
-        <h2>全域旅游示范区</h2>
-        <div class="gallery">
-            <img src="https://example.com/huaianfu.jpg" alt="淮安府署">
-            <img src="https://example.com/hexiagu.jpg" alt="河下古镇">
-            <img src="https://example.com/yunhe.jpg" alt="运河长廊">
-        </div>
-        <div class="columns">
-            <div class="column">
-                <h3>必游景点</h3>
-                <ul>
-                    <li>中国漕运博物馆：展示千年漕运文化</li>
-                    <li>河下古镇：2500年历史的水运商埠</li>
-                    <li>淮安府署：全国最大明清府衙</li>
-                </ul>
+        <!-- 美食展示 -->
+        <section class="section" id="food">
+            <div class="grid">
+                <div class="card">
+                    <img src="https://example.com/changyumian.jpg" alt="长鱼面">
+                    <div class="card-content">
+                        <h3>淮扬美食</h3>
+                        <p>软兜长鱼、平桥豆腐、文楼汤包等非遗美食...</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer style="background:#004B87; color:white; text-align:center; padding:1rem;">
-        <p>© 2025 淮安区文化旅游局 | 数据来源：淮安市文旅发展报告</p>
+    <footer>
+        <p>© 2025 淮安区文化旅游局</p>
+        <p>旅游咨询：0517-85912345</p>
+        <p>数据来源：江苏省文旅发展报告</p>
     </footer>
 </body>
 </html>
