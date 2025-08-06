@@ -1,3 +1,4 @@
+全网T1,#genre#
 CCTV1,http://ygbh.site/php/bfgd.php?id=488
 CCTV1,http://ygbh.site/php/bfgd.php?id=201
 CCTV1,http://ygbh.site/php/bfgd.php?id=484
@@ -141,3 +142,4 @@ CGTN西班牙语,http://ygbh.site/php/bfgd.php?id=306
 北方导视,http://ygbh.site/php/bfgd.php?id=187
 北京纪实科教,http://ygbh.site/php/bfgd.php?id=113
 北京卡酷少儿,http://ygbh.site/php/bfgd.php?id=106
+
